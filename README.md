@@ -1,8 +1,8 @@
 # Protein Language Model Embeddings for Mutation Fitness Score Prediction
 ### Overview
 The goal of this project is to create a minimal setup to evaluate whether embeddings from protein language models (ESM) encode information relevant to fitness of mutations. 
-To keep the setup minimal, we choose a single mutation type (missense mutations) and a single protein (AGR_ECOLI) for these experiments. This allows us to draw conclusions without potentially confounding information that would be introduced by a large dataset. This can be thought of as a viability or groundwork study to determine if this task is suitable for larger-scale ML modeling with deep learning.
-**Dataset:** DMS dataset of E.Coli protein mutations (1287 missense mutations for AGR_ECOLI)
+To keep the setup minimal, we choose a single mutation type (missense mutations) and a single protein (ARGR_ECOLI) for these experiments. This allows us to draw conclusions without potentially confounding information that would be introduced by a large dataset. This can be thought of as a viability or groundwork study to determine if this task is suitable for larger-scale ML modeling with deep learning.
+**Dataset:** DMS dataset of E.Coli protein mutations (1287 missense mutations for ARGR_ECOLI)
 **Key questions:**
 
 1. Is there a linear relationship between ESM embeddings and mutation fitness
@@ -10,7 +10,7 @@ To keep the setup minimal, we choose a single mutation type (missense mutations)
 3. Does the mapping from embedding -> phenotype include non-linear interactions between embedding dimensions?
 
 ### Data Loading and Preprocessing:
-* A single protein was selected from ProteinGym (AGR_ECOLI)
+* A single protein was selected from ProteinGym (ARGR_ECOLI)
 * Data consists of ‘mutant type in the format ‘A10C’ = A is replaced by C at index 10 (1-indexed). See Figure 1.
 * Sequences are tokenized, and ESM2 embeddings are computed with ESM model ‘facebook/esm2_t6_8M_UR50D' from HuggingFace. This version is chosen due to the small dataset size and minimal compute requirements.
 * Each sequence is tokenized into a 71-character string, and embeddings are computed per input token, resulting in an output dimension of (num_mutations, num_tokens, emb_dim). We take the mean along the token dimension for the remainder of this analysis, resulting in embeddings with shape (num_embeddings, emb_dim) which in this case is (1287, 320).
