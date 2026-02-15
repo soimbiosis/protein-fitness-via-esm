@@ -23,6 +23,7 @@ To keep the setup minimal, we choose a single mutation type (missense mutations)
 
 
 Figure 1. Raw Data
+
 ![Figure 1. Raw Data](figures/raw_data.png)
 
 ## Experiments
@@ -39,6 +40,7 @@ As mentioned in the Overview, there are 3 key questions that are investigated he
 
 
 Figure 2.
+
 ![Figure 2.](figures/ridge_scores.png)
 
 **Takeaway:** Strong Spearman and Pearson indicate that embeddings do in fact linearly encode phenotype information.
@@ -50,6 +52,7 @@ Figure 2.
 
 
 Figure 3. 
+
 ![Figure 3.](figures/pca_two_components.png)
 
 
@@ -62,6 +65,7 @@ Given this observation, we run Ridge regression with just the first 4 principal 
 | 0.48     | 0.59    |
 
 Figure 4.
+
 ![Figure 4.](figures/pca_ridge_scores.png)
 
 **Takeaways:** The signal from the embeddings is high-dimensional. PCA identifies directions with greatest variance, but despite the appearance of correlation of the first components with mutation fitness, restricting the signal to only these components proved detrimental to fitness prediction ability.
@@ -78,6 +82,7 @@ Figure 4.
 | Test          | 0.88     | 0.95    |
 
 Figure 5.
+
 ![Figure 5.](figures/mlp_scores.png)
 
 **Takeaway:** The improvement over Ridge Regression suggests that there are indeed non-linear relationships between embedding dimensions relevant to mutation fitness.
@@ -95,8 +100,10 @@ Figure 6. Comparison of metrics across models
 | MLP           | 0.82     | 0.89    |
 
 Figure 7.
+
 ![Figure 6.](figures/summary_scores.png)
 
 Figure 8.
+
 ![Figure 7.](figures/residuals.png)
 
