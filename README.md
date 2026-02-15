@@ -3,13 +3,14 @@
 The goal of this project is to create a minimal setup to evaluate whether embeddings from protein language models (ESM) encode information relevant to fitness of mutations. 
 To keep the setup minimal, we choose a single mutation type (missense mutations) and a single protein (ARGR_ECOLI) for these experiments. This allows us to draw conclusions without potentially confounding information that would be introduced by a large dataset. This can be thought of as a viability or groundwork study to determine if this task is suitable for larger-scale ML modeling with deep learning.
 
-**Dataset:** DMS dataset of E.Coli protein mutations (1287 missense mutations for AGR_ECOLI)
+**Dataset:** DMS dataset of E.Coli protein mutations (1287 missense mutations for ARGR_ECOLI)
 
 **Key questions:**
 
 1. Is there a linear relationship between ESM embeddings and mutation fitness
 2. Is there meaningful structure in embedding geometry as it relates to fitness?
 3. Does the mapping from embedding -> phenotype include non-linear interactions between embedding dimensions?
+
 
 ## Data Loading and Preprocessing:
 * A single protein was selected from ProteinGym (ARGR_ECOLI)
