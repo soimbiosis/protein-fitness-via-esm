@@ -78,8 +78,8 @@ Figure 4.
 
 | Train/test    | Spearman | Pearson |
 |---------------|----------|---------|
-| Train         | 0.83     | 0.89    |
-| Test          | 0.88     | 0.95    |
+| Test          | 0.83     | 0.89    |
+| Train         | 0.88     | 0.95    |
 
 Figure 5.
 
